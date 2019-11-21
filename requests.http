@@ -1,0 +1,31 @@
+@baseuri = http://localhost:3500/v1.0
+### 
+GET http://localhost:3500/v1.0/invoke/BronImporter/method/export
+
+### 
+GET http://localhost:3500/v1.0/invoke/BronImporter/method/import
+
+###
+
+PUT {{baseuri}}/actors/EmployeeActor/mijntest/method/SetEmployeeAsync
+
+{
+    "Guid": "c915d247-2479-494c-8aba-7d6a204fc9a1",
+    "FirstName": "Eefje",
+    "LastName": "Dijkstra",
+    "MiddelName": null
+}
+
+
+###
+
+PUT {{baseuri}}/actors/MyActor/asp/method/SetDataAsync
+
+{
+    "PropertyA": "foo",
+    "PropertyB": "foo"
+}
+
+###
+
+GET {{baseuri}}/actors/MyActor/asp/method/GetDataAsync
