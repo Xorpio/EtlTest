@@ -1,1 +1,74 @@
-[{"Guid":"5a50e5a6-c532-46ec-b574-4eb4c8443aed","EmployeeGuid":"616c2a73-0a31-419c-bdcd-31162107cd32","Fte":1,"Function":"Legacy Marketing Administrator","Location":1,"StartDate":"2019-04-15T11:36:13.8371663+02:00","EndDate":null},{"Guid":"f0794236-054c-4497-bb14-03dab9310c7b","EmployeeGuid":"2cc8b131-7198-49ca-bba2-9adff0cead2d","Fte":1,"Function":"Dynamic Intranet Strategist","Location":1,"StartDate":"2019-02-24T06:49:43.6829943+01:00","EndDate":null},{"Guid":"b34761a9-78af-4bb7-b2c6-a7507d3af34e","EmployeeGuid":"c915d247-2479-494c-8aba-7d6a204fc9a1","Fte":0.1,"Function":"Direct Usability Producer","Location":1,"StartDate":"2019-02-13T10:57:14.5044458+01:00","EndDate":null},{"Guid":"96a87b14-d884-4981-aab0-f99576032dad","EmployeeGuid":"c915d247-2479-494c-8aba-7d6a204fc9a1","Fte":0.2,"Function":"Regional Division Administrator","Location":0,"StartDate":"2019-06-08T15:14:34.8594077+02:00","EndDate":null},{"Guid":"fca3abab-d462-43c9-8417-3d9b5faca0bf","EmployeeGuid":"c915d247-2479-494c-8aba-7d6a204fc9a1","Fte":0.7,"Function":"Customer Security Planner","Location":2,"StartDate":"2019-11-16T15:41:45.268086+01:00","EndDate":null},{"Guid":"631169f7-9aa0-407e-b858-6942c0535839","EmployeeGuid":"c64011d7-ec0b-4ade-a7ac-48e88fe652b8","Fte":0.3,"Function":"Investor Intranet Architect","Location":1,"StartDate":"2019-03-31T03:27:38.2343755+02:00","EndDate":null},{"Guid":"ac841dab-4ac8-47f2-91f2-880e5fd4099e","EmployeeGuid":"c64011d7-ec0b-4ade-a7ac-48e88fe652b8","Fte":0.7,"Function":"Customer Implementation Director","Location":0,"StartDate":"2019-10-30T03:48:33.2813343+01:00","EndDate":null},{"Guid":"1e1498a7-8e78-4628-b49d-1d385d944688","EmployeeGuid":"81692f50-fdc2-4c85-ba14-3a0966210793","Fte":1,"Function":"Dynamic Infrastructure Agent","Location":0,"StartDate":"2019-11-01T16:42:34.2969581+01:00","EndDate":null}]
+[
+  {
+    "Guid": "5a50e5a6-c532-46ec-b574-4eb4c8443aed",
+    "EmployeeGuid": "616c2a73-0a31-419c-bdcd-31162107cd32",
+    "Fte": 1,
+    "Function": "Legacy Marketing Administrator",
+    "Location": 1,
+    "StartDate": "2019-04-15T11:36:13.8371663+02:00",
+    "EndDate": null
+  },
+  {
+    "Guid": "f0794236-054c-4497-bb14-03dab9310c7b",
+    "EmployeeGuid": "2cc8b131-7198-49ca-bba2-9adff0cead2d",
+    "Fte": 1,
+    "Function": "Dynamic Intranet Strategist",
+    "Location": 1,
+    "StartDate": "2019-02-24T06:49:43.6829943+01:00",
+    "EndDate": null
+  },
+  {
+    "Guid": "b34761a9-78af-4bb7-b2c6-a7507d3af34e",
+    "EmployeeGuid": "c915d247-2479-494c-8aba-7d6a204fc9a1",
+    "Fte": 0.1,
+    "Function": "Direct Usability Producer",
+    "Location": 1,
+    "StartDate": "2019-02-13T10:57:14.5044458+01:00",
+    "EndDate": null
+  },
+  {
+    "Guid": "96a87b14-d884-4981-aab0-f99576032dad",
+    "EmployeeGuid": "c915d247-2479-494c-8aba-7d6a204fc9a1",
+    "Fte": 0.2,
+    "Function": "Regional Division Administrator",
+    "Location": 0,
+    "StartDate": "2019-06-08T15:14:34.8594077+02:00",
+    "EndDate": null
+  },
+  {
+    "Guid": "fca3abab-d462-43c9-8417-3d9b5faca0bf",
+    "EmployeeGuid": "c915d247-2479-494c-8aba-7d6a204fc9a1",
+    "Fte": 0.7,
+    "Function": "Customer Security Planner",
+    "Location": 2,
+    "StartDate": "2019-11-16T15:41:45.268086+01:00",
+    "EndDate": null
+  },
+  {
+    "Guid": "631169f7-9aa0-407e-b858-6942c0535839",
+    "EmployeeGuid": "c64011d7-ec0b-4ade-a7ac-48e88fe652b8",
+    "Fte": 0.3,
+    "Function": "Investor Intranet Architect",
+    "Location": 1,
+    "StartDate": "2019-03-31T03:27:38.2343755+02:00",
+    "EndDate": null
+  },
+  {
+    "Guid": "ac841dab-4ac8-47f2-91f2-880e5fd4099e",
+    "EmployeeGuid": "c64011d7-ec0b-4ade-a7ac-48e88fe652b8",
+    "Fte": 0.7,
+    "Function": "Customer Implementation Director",
+    "Location": 0,
+    "StartDate": "2019-10-30T03:48:33.2813343+01:00",
+    "EndDate": null
+  },
+  {
+    "Guid": "1e1498a7-8e78-4628-b49d-1d385d944688",
+    "EmployeeGuid": "81692f50-fdc2-4c85-ba14-3a0966210793",
+    "Fte": 1,
+    "Function": "Dynamic Infrastructure Agent",
+    "Location": 0,
+    "StartDate": "2019-11-01T16:42:34.2969581+01:00",
+    "EndDate": null
+  }
+]
