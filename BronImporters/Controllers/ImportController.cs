@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Concurrent;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Text.Json;
@@ -27,7 +25,6 @@ namespace BronImporters.Controllers
                 // some pre stuff
                 var actor = ActorProxy.Create<IEmployeeActor>(new Dapr.Actors.ActorId(emp.Guid.ToString()), "EmployeeActor");
                 var response = await actor.SetEmployeeAsync(emp);
-                Console.WriteLine(response);
             });
             await Task.WhenAll(tasks);
 
