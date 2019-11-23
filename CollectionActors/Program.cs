@@ -1,4 +1,5 @@
-﻿using Dapr.Actors.AspNetCore;
+﻿using CollectionActors.Actors;
+using Dapr.Actors.AspNetCore;
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
@@ -18,7 +19,7 @@ namespace CollectionActors
                 .UseActors(actorRuntime =>
                 {
                     //Register MyActor actor type
-                    //actorRuntime.RegisterActor<>();
+                    actorRuntime.RegisterActor<EmployeeCollectionActor>();
                 })
                 .UseUrls($"http://localhost:6020/");
     }
