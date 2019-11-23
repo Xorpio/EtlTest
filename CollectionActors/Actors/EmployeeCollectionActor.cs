@@ -9,14 +9,17 @@ namespace CollectionActors.Actors
 {
     public class EmployeeCollectionActor : Actor, IEmployeeCollectionActor
     {
-        private string stateKey = "EmployeeCollection";
+        private readonly string stateKey = "EmployeeCollection";
+
+        private IList<Guid>? list;
+
         public EmployeeCollectionActor(ActorService actorService, ActorId actorId) : base(actorService, actorId)
         {
         }
 
         public async Task<Guid> AddGuid(Guid guid)
         {
-            var list = await StateManager.GetOrAddStateAsync(stateKey, new List<Guid>());
+            list ??= await StateManager.GetOrAddStateAsync(stateKey, new List<Guid>());
 
             if (!list.Contains(guid))
             {
@@ -29,7 +32,7 @@ namespace CollectionActors.Actors
 
         public async Task<Guid> DeleteGuid(Guid guid)
         {
-            var list = await StateManager.GetOrAddStateAsync(stateKey, new List<Guid>());
+            list ??= await StateManager.GetOrAddStateAsync(stateKey, new List<Guid>());
 
             if (list.Contains(guid))
             {
@@ -42,7 +45,7 @@ namespace CollectionActors.Actors
 
         public async Task<IList<Guid>> GetGuids()
         {
-            return await StateManager.GetOrAddStateAsync(stateKey, new List<Guid>());
+            return list ?? await StateManager.GetOrAddStateAsync(stateKey, new List<Guid>());
         }
     }
 }
