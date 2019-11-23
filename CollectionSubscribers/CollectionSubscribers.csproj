@@ -9,4 +9,8 @@
     <PackageReference Include="Dapr.AspNetCore" Version="0.2.0-preview02" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Bronsysteem\Bronsysteem.csproj" />
+  </ItemGroup>
+
 </Project>

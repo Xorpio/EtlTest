@@ -3,30 +3,29 @@ using System.Threading.Tasks;
 using Bronsysteem;
 using Bronsysteem.Actors;
 using Dapr.Actors;
-using Dapr.Actors.Client;
 using Dapr.Actors.Runtime;
+using Refit;
 
 namespace BronActors.Actors
 {
     public class EmployeeActor : Actor, IEmployeeActor
     {
-        //private IEmployeeCollectionActor? _collectionActor;
-        //private IEmployeeCollectionActor collectionActor
-        //{
-        //    get
-        //    {
-        //        _collectionActor ??= ActorProxy.Create<IEmployeeCollectionActor>(new ActorId("collection"), "EmployeeCollectionActor");
-        //        return _collectionActor;
-        //    }
-        //}
+        private const string stateName = "employee";
+        private readonly IDaprPublishApi daprPublishApi;
 
         public EmployeeActor(ActorService actorService, ActorId actorId) : base(actorService, actorId)
         {
+            this.daprPublishApi = RestService.For<IDaprPublishApi>("http://localhost:3500/v1.0");
         }
 
         public async Task<string> SetEmployeeAsync(Employee employee)
         {
-            var tstate = this.StateManager.SetStateAsync("employee", employee);
+            if (!(await StateManager.ContainsStateAsync(stateName)))
+            {
+                await daprPublishApi.PublishTopic("EmployeeEvent", new EmployeeEvent(employee.Guid, action.Add));
+            }
+
+            var tstate = this.StateManager.SetStateAsync(stateName, employee);
 
             //var tcollection = collectionActor.AddGuid(employee.Guid);
 
@@ -40,7 +39,7 @@ namespace BronActors.Actors
 
         public Task<Employee> GetEmployeeAsync()
         {
-            return this.StateManager.GetStateAsync<Employee>("employee");
+            return this.StateManager.GetStateAsync<Employee>(stateName);
         }
     }
 }
