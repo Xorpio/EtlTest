@@ -1,2 +1,2 @@
 dotnet build
-dapr run --app-id bronimporters --app-port 5000 dotnet run
+dapr run --app-id bronimporters --app-port 6010 dotnet run
