@@ -4,12 +4,10 @@ namespace Bronsysteem
 {
     public class EmployeeEvent
     {
-        private action add;
-
-        public EmployeeEvent(Guid guid, action add)
+        public EmployeeEvent(Guid guid, action action)
         {
             Guid = guid;
-            this.add = add;
+            Action = action;
         }
 
         public EmployeeEvent() { }
