@@ -28,9 +28,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CollectionActors", "Collect
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CollectionSubscribers", "CollectionSubscribers\CollectionSubscribers.csproj", "{363CD32B-91C9-4364-8218-5228107BF843}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EtlTestProject", "EtlTestProject\EtlTestProject.csproj", "{CC5EB341-64BC-40A4-BBC5-198EC8BF4E75}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EtlTestProject", "EtlTestProject\EtlTestProject.csproj", "{CC5EB341-64BC-40A4-BBC5-198EC8BF4E75}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IAMSubsciber", "IAMSubsciber\IAMSubsciber.csproj", "{939BE684-BF38-4AD0-83AC-55513364074B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IAMSubsciber", "IAMSubsciber\IAMSubsciber.csproj", "{939BE684-BF38-4AD0-83AC-55513364074B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IAMActors", "IAMEmployee\IAMActors.csproj", "{022426EE-1267-4EEC-B338-32DDD01965A8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -150,6 +152,18 @@ Global
 		{939BE684-BF38-4AD0-83AC-55513364074B}.Release|x64.Build.0 = Release|Any CPU
 		{939BE684-BF38-4AD0-83AC-55513364074B}.Release|x86.ActiveCfg = Release|Any CPU
 		{939BE684-BF38-4AD0-83AC-55513364074B}.Release|x86.Build.0 = Release|Any CPU
+		{022426EE-1267-4EEC-B338-32DDD01965A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{022426EE-1267-4EEC-B338-32DDD01965A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{022426EE-1267-4EEC-B338-32DDD01965A8}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{022426EE-1267-4EEC-B338-32DDD01965A8}.Debug|x64.Build.0 = Debug|Any CPU
+		{022426EE-1267-4EEC-B338-32DDD01965A8}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{022426EE-1267-4EEC-B338-32DDD01965A8}.Debug|x86.Build.0 = Debug|Any CPU
+		{022426EE-1267-4EEC-B338-32DDD01965A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{022426EE-1267-4EEC-B338-32DDD01965A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{022426EE-1267-4EEC-B338-32DDD01965A8}.Release|x64.ActiveCfg = Release|Any CPU
+		{022426EE-1267-4EEC-B338-32DDD01965A8}.Release|x64.Build.0 = Release|Any CPU
+		{022426EE-1267-4EEC-B338-32DDD01965A8}.Release|x86.ActiveCfg = Release|Any CPU
+		{022426EE-1267-4EEC-B338-32DDD01965A8}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
