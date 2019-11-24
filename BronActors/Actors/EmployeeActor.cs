@@ -2,6 +2,7 @@
 using System.Threading.Tasks;
 using Bronsysteem;
 using Bronsysteem.Actors;
+using Bronsysteem.Events;
 using Dapr.Actors;
 using Dapr.Actors.Runtime;
 using Refit;
@@ -25,12 +26,7 @@ namespace BronActors.Actors
                 await daprPublishApi.PublishTopic("EmployeeEvent", new EmployeeEvent(employee.Guid, action.Add));
             }
 
-            var tstate = this.StateManager.SetStateAsync(stateName, employee);
-
-            //var tcollection = collectionActor.AddGuid(employee.Guid);
-
-            await tstate;
-            //await tcollection;
+            await this.StateManager.SetStateAsync(stateName, employee);
 
             Console.WriteLine(System.Text.Json.JsonSerializer.Serialize(employee));
 

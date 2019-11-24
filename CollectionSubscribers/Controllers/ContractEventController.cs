@@ -14,14 +14,14 @@ namespace CollectionActors.Controllers
 {
     [Route("[controller]")]
     [ApiController]
-    public class EmployeeEventController : ControllerBase
+    public class ContractEventController : ControllerBase
     {
-        [Topic("EmployeeEvent")]
+        [Topic("ContractEvent")]
         [HttpPost]
-        public async Task Index(SubscribeEvent<EmployeeEvent> actionEvent)
+        public async Task Index(SubscribeEvent<ContractEvent> actionEvent)
         {
             Console.WriteLine(actionEvent.data.Guid.ToString());
-            var actor = ActorProxy.Create<ICollectionActor>(new ActorId("BronEmployees"), "CollectionActor");
+            var actor = ActorProxy.Create<ICollectionActor>(new ActorId("BronContracts"), "CollectionActor");
             if (actionEvent.data.Action == action.Add)
             {
                 var response = await actor.AddGuid(actionEvent.data.Guid);

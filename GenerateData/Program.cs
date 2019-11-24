@@ -48,7 +48,7 @@ namespace GenerateData
 
                     contracts.Add(new Faker<Contract>("nl")
                         .StrictMode(true)
-                        .RuleFor(c => c.Guid, Guid.NewGuid())
+                        .RuleFor(c => c.Guid, f => Guid.NewGuid())
                         .RuleFor(c => c.Location, f => f.PickRandom<Locatie>())
                         .RuleFor(c => c.Function, f => f.Name.JobTitle())
                         .RuleFor(c => c.Fte, curFte)
@@ -64,12 +64,12 @@ namespace GenerateData
                 } while (fte < 1);
             }
 
-            var students = (new Faker<Student>("nl")
+            var students = (new Faker<StudentImport>("nl")
                 .StrictMode(true)
+                .RuleFor(s => s.Guid, f => Guid.NewGuid())
                 .RuleFor(s => s.FirstName, f => f.Name.FirstName())
                 .RuleFor(s => s.LastName, f => f.Name.LastName())
                 .RuleFor(s => s.MiddelName, f => f.PickRandom("de", "van", "van het", null!))
-                .RuleFor(s => s.Guid, Guid.NewGuid())
                 .RuleFor(s => s.Lessons, GenerateLessonsString)
                 .FinishWith((f, p) =>
                 {
@@ -83,7 +83,7 @@ namespace GenerateData
             System.IO.File.WriteAllText("contracts.json", JsonSerializer.Serialize(contracts));
         }
 
-        private static string GenerateLessonsString(Faker fake, Student s)
+        private static string GenerateLessonsString(Faker fake, StudentImport s)
         {
 
             Func<string> faker = () => fake.PickRandom(

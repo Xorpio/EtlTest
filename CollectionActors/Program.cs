@@ -19,7 +19,7 @@ namespace CollectionActors
                 .UseActors(actorRuntime =>
                 {
                     //Register MyActor actor type
-                    actorRuntime.RegisterActor<EmployeeCollectionActor>();
+                    actorRuntime.RegisterActor<CollectionActor>();
                 })
                 .UseUrls($"http://localhost:6020/");
     }

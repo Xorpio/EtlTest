@@ -1,19 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using Dapr.Actors;
 using Dapr.Actors.Runtime;
 
 namespace CollectionActors.Actors
 {
-    public class EmployeeCollectionActor : Actor, IEmployeeCollectionActor
+    public class CollectionActor : Actor, ICollectionActor
     {
-        private readonly string stateKey = "EmployeeCollection";
+        private readonly string stateKey = "Collection";
 
         private IList<Guid>? list;
 
-        public EmployeeCollectionActor(ActorService actorService, ActorId actorId) : base(actorService, actorId)
+        public CollectionActor(ActorService actorService, ActorId actorId) : base(actorService, actorId)
         {
         }
 

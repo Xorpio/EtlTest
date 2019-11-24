@@ -26,6 +26,8 @@ namespace BronActors
                 {
                     //Register MyActor actor type
                     actorRuntime.RegisterActor<EmployeeActor>();
+                    actorRuntime.RegisterActor<StudentActor>();
+                    actorRuntime.RegisterActor<ContractActor>();
                 })
                 .UseUrls($"http://localhost:6000/");
     }
